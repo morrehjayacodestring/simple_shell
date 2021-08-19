@@ -18,3 +18,6 @@ An introductory project on:
 **[AUTHORS](AUTHORS)** - List of contributors to this project.
 
 **[License](LICENSE)** - License for this project.
+
+**[man_1_simple_shell](man_1_simple_shell)** - Manual page for this simple shell
+
