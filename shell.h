@@ -21,15 +21,14 @@
  */
 typedef struct list
 {
-  char *var;
-  struct list *next;
+char *var;
+struct list *next;
 
 } list_t;
 
 extern char **environ;
 
 /* Shell Functions */
-char **str_to_2d(char *buff_str, char del[]);
 void exe_new_process(char **args);
 char *status_checker(char **args);
 char *_getenv(const char *name);
