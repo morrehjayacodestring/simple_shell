@@ -26,6 +26,26 @@ typedef struct list
 
 } list_t;
 
+extern char **environ;
+
+/* Shell Functions */
+char **str_to_2d(char *buff_str, char del[]);
+void exe_new_process(char **args);
+char *status_checker(char **args);
+char *_getenv(const char *name);
+char **cp_environ(void);
+char *_is_ascii(char *buffer);
+char *sep_check(char *buffer);
+
+/* Basic Functions */
+int _putchar(char c);
+int p_text(char *text);
+
+/* Strings Functions */
+char *_strdup(char *str);
+char *_strcat(char *s1, char *s2);
+unsigned int _strlen(char *s);
+
 /* function prototypes */
 int prompt(char **env);
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size);
