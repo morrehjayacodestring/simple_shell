@@ -12,7 +12,6 @@ int len = 0;
 int len2 = 0;
 int total_len = 0;
 int j = 0;
-
 /* find total length of both strings to _realloc */
 while (dest[len] != '\0')
 {
@@ -24,12 +23,9 @@ while (src[len2] != '\0')
 len2++;
 total_len++;
 }
-
 /* _realloc because dest was malloced outside of function */
 dest = _realloc(dest, len, sizeof(char) * total_len + 1);
-
 j = 1; /* ignore the first character */
-
 while (src[j] != '\0')
 {
 dest[len] = src[j];
@@ -37,7 +33,6 @@ len++;
 j++;
 }
 dest[len] = '\0';
-
 return (dest);
 }
 
@@ -53,13 +48,11 @@ int c_setenv(list_t **env, char *name, char *dir)
 int index = 0, j = 0;
 char *cat;
 list_t *holder;
-
 cat = _strdup(name); /* create new concatenated string */
 cat = _strcat(cat, "=");
 cat = _strcat(cat, dir);
 index = find_env(*env, name); /* get idx to env var in linked list */
-
- /* traverse to idx, free node data, reassign data */
+/* traverse to idx, free node data, reassign data */
 holder = *env;
 while (j < index)
 {
@@ -80,7 +73,6 @@ return (0);
 void cd_only(list_t *env, char *current)
 {
 char *home = NULL;
-
 home = get_env("HOME", env);
 c_setenv(&env, "OLDPWD", current); /* update env OLDPWD */
 free(current);
@@ -104,7 +96,6 @@ free(home);
 int cd_execute(list_t *env, char *current, char *dir, char *str, int num)
 {
 int i = 0;
-
 if (access(dir, F_OK) == 0)
 {
 c_setenv(&env, "OLDPWD", current); /* update env OLDPWD */
@@ -135,7 +126,6 @@ int _cd(char **str, list_t *env, int num)
 {
 char *current = NULL, *dir = NULL;
 int exit_stat = 0;
-
 current = getcwd(current, 0); /* store current working directory */
 if (str[1] != NULL)
 {

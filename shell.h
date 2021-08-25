@@ -21,8 +21,9 @@
  */
 typedef struct list
 {
-char *var;
-struct list *next;
+  char *var;
+  struct list *next;
+
 } list_t;
 
 /* function prototypes */
