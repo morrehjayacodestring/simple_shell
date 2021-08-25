@@ -12,7 +12,7 @@ int t_strlen(char *str, int pos, char delm)
 int len = 0;
 
 while ((str[pos] != delm) && (str[pos] != '\0'))
-    {
+{
 pos++;
 len++;
 }
@@ -89,7 +89,7 @@ toks[p] = malloc(sizeof(char) * (len + 1));
 if (toks[p] == NULL)
 return (NULL);
 i = 0;
-while ((str[si] != d_ch) && (str[si] != '\0'))
+while ((str[si] != d_ch) &&(str[si] != '\0'))
 {
 toks[p][i] = str[si];
 i++;
